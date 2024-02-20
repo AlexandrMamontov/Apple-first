@@ -1,0 +1,240 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1700px;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.hero__title {
+  position: absolute;
+  top: 40%;
+  left: 5vw;
+  transform: translateY(-40%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: normal;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.hero__img {
+  width: 1500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* materials */
+.materials {
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
+
+.materials__title {
+  margin: 0;
+  padding-top: 20px;
+  position: sticky;
+  top: 0;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: normal;
+  color: #000;
+  text-align: center;
+  /* z-index: 5; */
+}
+
+.materials__wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 100%);
+  z-index: 100;
+}
+
+.materials__content {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.materials__info {
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.materials__subtitle {
+  font-size: 3vw;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+.materials__img {
+  width: 50%;
+}
+
+.materials__bar {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 35px;
+  line-height: normal;
+  color: #fff;
+  text-align: center;
+}
+
+.materials__bar span {
+  margin-right: 7px;
+  font-weight: bold;
+}
+
+/* oformlenie */
+.oformlenie {
+  background: #fff;
+}
+
+.oformlenie__title {
+  margin: 0;
+  padding-top: 20px;
+  position: sticky;
+  top: 0;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: normal;
+  color: #000;
+  text-align: center;
+  /* z-index: 5; */
+}
+
+/* .oformlenie__background {
+  background: url('../img/fon-priroda.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: 2;
+} */
+
+.oformlenie__section {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+.oformlenie__section > * {
+  width: 50%;
+}
+
+.oformlenie__section-img {
+  position: relative;
+  display: flex;
+}
+
+.oformlenie__section-img-inner {
+  height: 100vh;
+  position: fixed;
+  /* left: 5%; */
+  width: 50%;
+  top: 0;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* filter: blur(30px); */
+  opacity: 0;
+  /* transform: translateX(-100%); */
+  transition: .6s ease, opacity .6s ease, transform .8s ease;
+}
+
+.oformlenie__section-body {
+  display: flex;
+  align-items: center;
+}
+
+.oformlenie__section-text {
+  padding-top: 10vw;
+  padding: 5vw;
+}
+
+.oformlenie__section.active .oformlenie__section-img-inner {
+  opacity: 1;
+  /* filter: blur(0); */
+  /* transform: translateX(0); */
+}
+
+.oformlenie__subtitle {
+  font-size: 3vw;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+/* new-block */
+.new-block {
+  height: 100vh;
+  position: relative;
+  z-index: 10;
+  background: #fff;
+}
